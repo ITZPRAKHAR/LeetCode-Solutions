@@ -38,22 +38,21 @@ class Solution
 {
     public:
     //Function to return the lowest common ancestor in a Binary Tree.
-    Node* lca(Node* root ,int p ,int q )
+    Node* lca(Node* root ,int n1 ,int n2 )
     {
        //Your code here 
        if(root == NULL){
-            return NULL;
-        }
-
-        if(root->data == p || root->data == q){
-            return root;
-        }
-
-        Node*leftAns = lca(root->left , p , q);
-        Node*rightAns = lca(root->right , p , q);
-
+           return NULL;
+       }
+       
+       if(root->data == n1|| root->data == n2){
+           return root;
+       }
+       
+       Node*leftAns = lca(root->left , n1 , n2 );
+        Node*rightAns = lca(root->right , n1 , n2 );
         
-        if(leftAns != NULL && rightAns != NULL){
+          if(leftAns != NULL && rightAns != NULL){
             return root;
         }
 
@@ -67,6 +66,8 @@ class Solution
         else {
             return NULL;
         }
+        
+        
     }
 };
 
