@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int longestPalindrome(const std::string& s) {
+    int longestPalindrome(const string& s) {
         unordered_set<char> charSet;
        
         int length = 0;
